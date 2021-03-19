@@ -66,6 +66,7 @@ public class Chapter01 {
         articleData.put("now", String.valueOf(now));
         articleData.put("votes", "1");
         conn.hmset(article, articleData);
+
         // 设置评分
         conn.zadd("score:", now + VOTE_SCORE, article);
         // 设置发布时间
