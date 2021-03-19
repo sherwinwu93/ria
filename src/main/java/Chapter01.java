@@ -44,6 +44,9 @@ public class Chapter01 {
         assert articles.size() >= 1;
     }
 
+    /**
+     * 发布网站
+     */
     public String postArticle(Jedis conn, String user, String title, String link) {
         // 生成新文章ID
         String articleId = String.valueOf(conn.incr("article:"));
